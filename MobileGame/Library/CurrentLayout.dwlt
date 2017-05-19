@@ -353,18 +353,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Sprites
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Studium\IMP\MobileGame\MobileGame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: c8240000
-    m_LastClickedID: 9416
+    m_SelectedIDs: 4c250000
+    m_LastClickedID: 9548
     m_ExpandedIDs: 000000009e240000c82400008226000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: 4c240000f03000007a24000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -561,14 +561,14 @@ MonoBehaviour:
     width: 939
     height: 591
   m_SceneLighting: 1
-  lastFramingTime: 14999.338539525763
+  lastFramingTime: 6889.854784114736
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 69.808815, y: 23.531954, z: 69.43001}
+    m_Target: {x: 14.114422, y: 4.7085533, z: -14.968176}
     speed: 2
-    m_Value: {x: 69.808815, y: 23.531954, z: 69.43001}
+    m_Value: {x: 14.114422, y: 4.7085533, z: -14.968176}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -591,13 +591,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.08901324, y: 0.29423982, z: -0.027535092, w: -0.951179}
+    m_Target: {x: -0.030304264, y: -0.00899034, z: 0.00027301782, w: -0.9995003}
     speed: 2
-    m_Value: {x: -0.08901324, y: 0.29423982, z: -0.027535094, w: -0.951179}
+    m_Value: {x: -0.030304264, y: -0.00899034, z: 0.00027301782, w: -0.9995003}
   m_Size:
-    m_Target: 165.65533
+    m_Target: 22
     speed: 2
-    m_Value: 165.65533
+    m_Value: 22
   m_Ortho:
     m_Target: 0
     speed: 2
