@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour {
 
-	static int theScore;
+	public static int theScore;
 	public GameObject scoreDisplay;
 
 	// Use this for initialization
