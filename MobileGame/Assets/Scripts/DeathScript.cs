@@ -8,6 +8,11 @@ public class DeathScript : MonoBehaviour {
 	public GameObject DeathText;
 	public GameObject TheRocket;
 
+	public AudioSource crash;
+	public GameObject mainAudio;
+
+	public GameObject highScore;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +24,9 @@ public class DeathScript : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider col){
+		highScore.SetActive (true);
+		crash.Play ();
+		mainAudio.SetActive (false);
 		DeathBlack.SetActive (true);
 		DeathText.SetActive (true);
 		TheRocket.SetActive (false);
