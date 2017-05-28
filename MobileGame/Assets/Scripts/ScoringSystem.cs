@@ -10,6 +10,7 @@ public class ScoringSystem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		theScore = 0;
 		InvokeRepeating ("addScore", 1, 0.1F);
 	}
 	

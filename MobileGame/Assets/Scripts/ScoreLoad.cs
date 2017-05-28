@@ -12,6 +12,8 @@ public class ScoreLoad : MonoBehaviour {
 
 	public string line;
 
+	public static int compareScore;
+
 	// Use this for initialization
 	void Start () {
 		StreamReader sr = new StreamReader (filename);
@@ -24,6 +26,8 @@ public class ScoreLoad : MonoBehaviour {
 		sr.Close ();
 
 		highScoreDisplay.GetComponent<Text>().text = "" + scoreLoad;
+
+		compareScore = int.Parse (scoreLoad);
 	}
 	
 	// Update is called once per frame

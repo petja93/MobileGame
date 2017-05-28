@@ -8,12 +8,18 @@ public class ScoreSave : MonoBehaviour {
 	public string fileName = "highscore.data";
 	public int scoreAmount;
 
+	public int highScore;
+
 	// Use this for initialization
 	void Start () {
-		scoreAmount = ScoringSystem.theScore;
-		StreamWriter ourfile = File.CreateText (fileName);
-		ourfile.WriteLine(scoreAmount);
-		ourfile.Close();
+		highScore = ScoreLoad.compareScore;
+		if (scoreAmount >= highScore) {
+			scoreAmount = ScoringSystem.theScore;
+			StreamWriter ourfile = File.CreateText (fileName);
+			ourfile.WriteLine(scoreAmount);
+			ourfile.Close();
+		}
+
 	}
 	
 	// Update is called once per frame
