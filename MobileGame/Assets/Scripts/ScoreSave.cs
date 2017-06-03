@@ -7,23 +7,16 @@ public class ScoreSave : MonoBehaviour {
 
 	public string fileName = "highscore.data";
 	public int scoreAmount;
+	//public int highScore;
 
-	public int highScore;
-
-	// Use this for initialization
 	void Start () {
-		highScore = ScoreLoad.compareScore;
-		if (scoreAmount >= highScore) {
+		//highScore = ScoreLoad.compareScore;
+		//if (scoreAmount >= highScore) {
 			scoreAmount = ScoringSystem.theScore;
-			StreamWriter ourfile = File.CreateText (fileName);
+			StreamWriter ourfile = File.CreateText (fileName); //von hier
 			ourfile.WriteLine(scoreAmount);
-			ourfile.Close();
-		}
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+			ourfile.Close(); //bis hier - Desktop-Version
+			//PlayerPrefs.SetInt("Highscore", scoreAmount); //wird für die Android-Version benötigt
+		//}
 	}
 }

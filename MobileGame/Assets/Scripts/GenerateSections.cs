@@ -13,16 +13,6 @@ public class GenerateSections : MonoBehaviour {
 	public GameObject newSec;
 	public Vector3 nextPosition = new Vector3 (NextAxes.theXAxis, 100, 50);
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public void OnTriggerEnter(Collider col){
 		nextPosition = new Vector3 (NextAxes.theXAxis, 100, 50);
 		genSec = Random.Range (1, 1);
