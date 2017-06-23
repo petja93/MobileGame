@@ -23,22 +23,23 @@ public class DeathScript : MonoBehaviour {
 	public static int amount = 1; //Ein weiterer Vorteil ist, wenn man die Variablen als static deklariert, kann man aus anderen Skripten darauf zugreifen
 
 	public void OnTriggerEnter(Collider col){
-
-		if (health <= 1) {
-			health = health - amount;
-			changeImage (health);
-			Debug.Log (" anderes getriggered");
-			NextAxes.theXAxis = -1.0F;
-			highScore.SetActive (true);
-			crash.Play ();
-			mainAudio.SetActive (false);
-			DeathBlack.SetActive (true);
-			DeathText.SetActive (true);
-			TheRocket.SetActive (false);
-		} else {
-			Debug.Log ("getriggered");
-			health = health - amount;
-			changeImage (health);
+		if (col.CompareTag ("Player")) {
+			if (health <= 1) {
+				health = health - amount;
+				changeImage (health);
+				Debug.Log (" anderes getriggered");
+				NextAxes.theXAxis = -1.0F;
+				highScore.SetActive (true);
+				crash.Play ();
+				mainAudio.SetActive (false);
+				DeathBlack.SetActive (true);
+				DeathText.SetActive (true);
+				TheRocket.SetActive (false);
+			} else {
+				Debug.Log ("getriggered");
+				health = health - amount;
+				changeImage (health);
+			}
 		}
 
 	}
