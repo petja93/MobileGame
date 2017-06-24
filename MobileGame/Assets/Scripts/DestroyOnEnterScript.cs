@@ -14,7 +14,7 @@ public class DestroyOnEnterScript : MonoBehaviour {
 	}
 
 	public void OnTriggerEnter(Collider other){
-		if (other.CompareTag ("Projectile")) {
+		if (other.CompareTag ("Laser")) { //Projectile
 			//other.SendMessage("ApplayDamage", damage.SendM
 			Destroy(gameObject);
 		}
