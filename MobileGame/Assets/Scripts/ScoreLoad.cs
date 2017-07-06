@@ -13,7 +13,7 @@ public class ScoreLoad : MonoBehaviour {
 	public static int compareScore;
 
 	void Start () {
-		StreamReader sr = new StreamReader (filename); //von hier 
+		StreamReader sr = new StreamReader (filename);  
 
 		line = sr.ReadLine ();
 		while (line != null) {
@@ -21,8 +21,7 @@ public class ScoreLoad : MonoBehaviour {
 			line = sr.ReadLine ();
 		}
 
-		sr.Close (); //bis hier - ist die Desktop-Version
-		//scoreLoad = PlayerPrefs.GetString ("Highscore"); //wird für Android-Version benötigt
+		sr.Close (); 
 		highScoreDisplay.GetComponent<Text>().text = "" + scoreLoad;
 		compareScore = int.Parse (scoreLoad);
 	}

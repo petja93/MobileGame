@@ -4,39 +4,24 @@ using UnityEngine;
 
 public class ShootScript : MonoBehaviour {
 
-	private int cooldown;
-	public int maxCooldown;
+	private bool isAttacking = false;
+	public GameObject laserPrefab;
+	public Transform spawnPoint;
+	public int laserSpeed = 2000;
 
-	public GameObject projectile;
 
-	public float speed = 8.0F;
-	public Vector3 moveDirection = Vector3.zero;
-
-	// Use this for initialization
-	void Start () {
-		cooldown = maxCooldown; //Dont do this if we are count with cooldown++;
-	}
-	
-	// Update is called once per frame
 	void Update () {
-		
+
+		if (Input.GetButtonDown ("Fire1") && !isAttacking) {
+			isAttacking = true;
+		}
 	}
 
-	private void FixedUpdate(){
-		cooldown--;
-
-		if (Input.GetButton ("Fire2")) {
-			if (cooldown <= 0) {
-				GameObject bullet = PoolBehaviour.bulletPool.getObject ();
-
-				moveDirection = new Vector3 (0, 0, Input.GetAxis ("Horizontal") + 3); //geh 3 Schritte nach rechts
-				moveDirection = transform.TransformDirection(moveDirection); 
-				moveDirection *= speed;
-
-				bullet.transform.position = transform.position + transform.forward;
-				bullet.transform.rotation = transform.rotation;
-				cooldown = maxCooldown;
-			}
+	void FixedUpdate(){
+		if (isAttacking) {
+			GameObject laser = (GameObject)Instantiate (laserPrefab, spawnPoint.position, Quaternion.identity); 
+			laser.GetComponent<Rigidbody> ().AddForce (Vector3.right * laserSpeed);
+			isAttacking = false;
 		}
 	}
 }

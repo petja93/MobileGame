@@ -10,19 +10,11 @@ public class Spracherkennung : MonoBehaviour
 	public string[] m_Keywords;
 	public KeywordRecognizer m_Recognizer;
 
-	//public Text results;
-	//protected string word = "hallo";
-
-	public AudioSource starSound;
 	public AudioSource song1;
 	public AudioSource song2;
 	public AudioSource song3;
 	public AudioSource song4;
 	public AudioSource song5;
-
-	//public GameObject cube;
-
-	//public PlayerControl playercontrol;
 
 	void Start()
 	{
@@ -38,9 +30,6 @@ public class Spracherkennung : MonoBehaviour
 		builder.AppendFormat("\tTimestamp: {0}{1}", args.phraseStartTime, Environment.NewLine);
 		builder.AppendFormat("\tDuration: {0} seconds{1}", args.phraseDuration.TotalSeconds, Environment.NewLine);
 		Debug.Log(builder.ToString());
-
-		//word = args.text;
-		//results.text = "Du hast gesagt: <b>" + word + "</b>";
 
 		if (args.text == m_Keywords [0]) {
 			song2.Stop ();
@@ -73,16 +62,5 @@ public class Spracherkennung : MonoBehaviour
 			song4.Stop ();
 			song5.Play ();
 		}
-
-			//starSound.Play ();
-			//Instantiate (cube, new Vector3 (0, 0, 1), Quaternion.identity); //sorgt dafür das ein Cube erstellt wird
-			//Spracherkennung mit Würfel funktioniert, mit springen vom Spieler noch nicht
-
-			//playercontrol.Update ();
-
-			/*playercontrol.moveDirection.y += playercontrol.jumpspeed; 
-		} else {
-			playercontrol.moveDirection.y += playercontrol.jumpspeed;
-		}*/
 	}
 }

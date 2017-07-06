@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NextAxes : MonoBehaviour {
 
-	public static float theXAxis = -1.0F;
+	public static float theXAxis = 817.0F;
 	public float internalAxis;
 
 	void Update () {

@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class DestroyOnEnterScript : MonoBehaviour {
 
-	void Start () {
-
-
-    }
-	
-	void Update () {
-	    
-	}
-
 	public void OnTriggerEnter(Collider other){
-		if (other.CompareTag ("Laser")) { //Projectile
-			//other.SendMessage("ApplayDamage", damage.SendM
+		if (other.CompareTag ("Laser")) { 
 			Destroy(gameObject);
 		}
 	}

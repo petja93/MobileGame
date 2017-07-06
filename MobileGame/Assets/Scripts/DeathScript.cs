@@ -19,8 +19,8 @@ public class DeathScript : MonoBehaviour {
 	public Image image;
 
 
-	public static int health = 3; //die beiden Variablen müssen statisch sein, da sonst die Rechnnung nicht funktioniert
-	public static int amount = 1; //Ein weiterer Vorteil ist, wenn man die Variablen als static deklariert, kann man aus anderen Skripten darauf zugreifen
+	public static int health = 3; 
+	public static int amount = 1; 
 
 	public void OnTriggerEnter(Collider col){
 		if (col.CompareTag ("Player")) {
